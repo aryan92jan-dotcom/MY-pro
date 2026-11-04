@@ -45,6 +45,7 @@
     .skills{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.skill{background:var(--panel);border:1px solid var(--line);border-radius:17px;padding:22px;text-align:center;transition:.25s}.skill:hover{transform:translateY(-6px);border-color:#45e0d077}.skill .symbol{font-size:1.8rem;color:var(--cyan);font-weight:900}.skill h3{font-size:1rem;margin:6px 0}.skill p{color:var(--muted);font-size:.8rem}
     .projects{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.project{overflow:hidden;background:var(--panel);border:1px solid var(--line);border-radius:19px;transition:.25s}.project:hover{transform:translateY(-7px);border-color:#6887ff77}.project-art{height:185px;display:grid;place-items:center;position:relative;overflow:hidden;background:radial-gradient(circle at 30% 30%,#6887ff66,transparent 40%),linear-gradient(135deg,#18274a,#101426)}.project-art.alt{background:radial-gradient(circle at 70% 20%,#45e0d055,transparent 40%),linear-gradient(135deg,#123b43,#101426)}.project-art.third{background:radial-gradient(circle at 50% 50%,#a77bff66,transparent 45%),linear-gradient(135deg,#30204b,#101426)}.mock{width:72%;height:115px;border:1px solid #ffffff55;border-radius:10px;background:#ffffff12;backdrop-filter:blur(8px);padding:12px;transform:rotate(-5deg);box-shadow:0 15px 35px #0005}.mock b{display:block;width:55%;height:8px;background:#fff;border-radius:5px;margin:5px 0 12px}.mock span{display:inline-block;width:25%;height:42px;background:#ffffff33;border-radius:5px;margin-left:5px}.project-info{padding:20px}.project-info h3{margin-bottom:6px}.project-info p{font-size:.87rem;color:var(--muted);min-height:52px}.tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:14px}.tags span{font-size:.72rem;color:#b9c6e8;background:#ffffff0b;padding:4px 9px;border-radius:7px}
     .contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:22px}.contact-item{display:flex;gap:13px;align-items:center;margin-top:20px;color:var(--muted)}.contact-item b{display:block;color:var(--text);font-size:.92rem}.contact-icon{width:42px;height:42px;display:grid;place-items:center;border-radius:12px;background:#45e0d014;color:var(--cyan);font-size:1.1rem}
+    .portfolio-container {display: grid;grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));gap: 25px;padding: 30px;background-color: #0f172a;font-family: Tahoma, sans-serif;}
     form{display:grid;gap:13px}.field{display:grid;gap:6px}.field label{font-size:.85rem;color:#c6cee3}.field input,.field textarea{width:100%;background:#080e1d;border:1px solid var(--line);border-radius:11px;padding:12px 14px;color:white;outline:none}.field input:focus,.field textarea:focus{border-color:var(--cyan)}.field textarea{min-height:120px;resize:vertical}.form-msg{font-size:.83rem;color:var(--cyan);min-height:24px}
     footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-size:.85rem}.footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}.top{color:var(--cyan)}
     .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}.reveal.show{opacity:1;transform:none}
@@ -118,16 +119,23 @@
       </div>
     </section>
 
-    <section id="projects">
-      <div class="container">
-        <div class="section-head reveal"><span class="kicker">پروژه ها</span><h2>نمونه کار ها</h2><p></p></div>
-        <div class="projects">
-          <article class="project reveal"><div class="project-art"><div class="mock"><b></b><span></span><span></span><span></span></div></div><div class="project-info"><h3>#</h3><p>#</p><div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div></div></article>
-          <article class="project reveal"><div class="project-art alt"><div class="mock"><b></b><span></span><span></span><span></span></div></div><div class="project-info"><h3>#</h3><p>#</p><div class="tags"><span>Vue</span><span>CSS</span><span>UI Design</span></div></div></article>
-          <article class="project reveal"><div class="project-art third"><div class="mock"><b></b><span></span><span></span><span></span></div></div><div class="project-info"><h3>#</h3><p>#</p><div class="tags"><span>HTML</span><span>CSS</span><span>Responsive</span></div></div></article>
+    <div class="portfolio-container">
+        <div class="portfolio-card">
+            <img src="https://picsum.photos/600/400?random=1" alt="تصویر نمونه کار" class="portfolio-img">
+            <div class="portfolio-content">
+                <h3 class="portfolio-title">پروژه جذاب اول</h3>
+                <p class="portfolio-desc">این یک نمونه کار فوق‌العاده است که با دقت و وسواس تمام پیاده‌سازی شده. تمیز، مدرن و حرفه‌ای!</p>
+            </div>
         </div>
-      </div>
-    </section>
+
+      <div class="portfolio-card">
+            <img src="https://picsum.photos/600/400?random=2" alt="تصویر نمونه کار" class="portfolio-img">
+            <div class="portfolio-content">
+                <h3 class="portfolio-title">پروژه خفن دوم</h3>
+                <p class="portfolio-desc">توسعهیافته با به روزترین تکنولوژی‌ها و بهینه‌سازی شده برای بالاترین سرعت ممکن.</p>
+            </div>
+        </div>
+    </div>
 
     <section id="contact">
       <div class="container">
