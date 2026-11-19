@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>گیمر استور | بهشت گیمر ها</title>
+    <link rel="icon" type="assets/logo.jpg" href="assets/logo.jpg">
+    <style>
+        :root {
+            --primary-color: #00d4ff;
+            --secondary-color: #ff007a;
+            --bg-dark: #0f0f1a;
+            --card-bg: #1a1a2e;
+            --text-light: #e0e0e0;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            font-family: 'Tahoma', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(26, 26, 46, 0.8);
+            backdrop-filter: blur(10px); /* افکت شیشه‌ای خفن */
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            margin-right: 20px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+		
+        .hero {
+            height: 450px;
+            background: linear-gradient(rgba(15, 15, 26, 0.7), rgba(15, 15, 26, 0.7)), 
+                        url('assets/GTA VI.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin: 0;
+            text-shadow: 0 0 20px var(--primary-color);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #aaa;
+            margin-top: 10px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--secondary-color);
+            margin: 10px auto;
+            border-radius: 2px;
+        }
+
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .product-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            width: 280px;
+            padding: 20px;
+            text-align: center;
+            transition: 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-color);
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.2);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: contain;
+            margin-bottom: 15px;
+            border-radius: 10px;
+        }
+
+        .product-card h3 {
+            font-size: 1.1rem;
+            margin: 10px 0;
+            height: 45px;
+            overflow: hidden;
+        }
+
+        .product-card p {
+            color: var(--secondary-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .product-card a {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .view-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 8px 20px;
+            background: transparent;
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            border-radius: 5px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .view-btn:hover {
+            background: var(--primary-color);
+            color: #fff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #555;
+            font-size: 0.9rem;
+        }
+
+        /* موبایل */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .product-card { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">GAMER STORE</a>
+        <nav class="nav-links">
+            <a href="index.html">خانه</a>
+            <a href="index.html">محصولات</a>
+            <a href="my.html">تماس با ما</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>تجهیزات گیمینگ حرفه‌ای</h1>
+        <p>بهترین قطعات سخت‌افزاری برای پیروزی در میدان جنگ!</p>
+    </section>
+
+    <div class="container">
+        <h2 class="section-title">جدیدترین محصولات</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <a href="rx580.html">
+                    <img src="assets/RX580.jpg" alt="RX580">
+                    <h3>کارت گرافیک RX580 8GB</h3>
+                    <p>23,000,000 تومان</p>
+                    <span class="view-btn">مشاهده جزئیات</span>
+                </a>
+            </div>
+            <div class="product-card">
+                <a href="i5.html">
+                    <img src="assets/i5.jpg" alt="i5 12400F">
+                    <h3>Intel Core i5 12400F</h3>
+                    <p>28,500,000 تومان</p>
+                    <span class="view-btn">مشاهده جزئیات</span>
+                </a>
+            </div>
+            <div class="product-card">
+                <a href="mouse.html">
+                    <img src="assets/mouse.jpg" alt="mouse">
+                    <h3>موس گیمینگ RGB</h3>
+                    <p>2,500,000 تومان</p>
+                    <span class="view-btn">مشاهده جزئیات</span>
+                </a>
+            </div>
+            <div class="product-card">
+                <a href="K.html">
+                    <img src="assets/k.jpg" alt="k">
+                    <h3>کیبورد ردراگون</h3>
+                    <p>6,800,000 تومان</p>
+                    <span class="view-btn">مشاهده جزئیات</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <footer>
+        &copy; 2026 Gamer Store - طراحی شده توسط آرین مریدی
+    </footer>
+</body>
+</html>
